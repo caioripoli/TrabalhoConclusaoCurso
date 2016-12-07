@@ -1,0 +1,168 @@
+/* cria as imagens dos potes da fase 3, além de outros conteúdos que estão nela*/
+.cima{
+	background-color: #0056ca;
+	text-decoration: none;
+	float: left;
+	color: #FFFFFF;
+	width: 100%;
+	height: 5%;   
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.baixo{
+	background-color: #fff;
+	text-decoration: none;
+	float: left;
+	color: #000;
+	width: 100%;
+	height: 15%;   
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.conteudo{
+	float:left;
+	width:100%;
+	height:90%;
+}
+
+#div-principal{
+	width:40%;
+	float:left;
+	background:#1E90FF;
+	height:100%;
+}
+
+#div-principal div{
+	margin-left:auto;
+	margin-right:auto;
+	float:none;
+}
+
+#div-selecionavel{
+	background-color: #fff;
+	width:60%;
+	float:left;
+}
+
+.cartao{
+	width:100px;
+	height:100px;
+	max-width:100px;
+	max-height:100px;
+	cursor:pointer;
+	float:left;
+	margin:18px;
+	border-radius:15px;
+}
+
+.selecionado{
+	position:absolute;
+}
+
+#legenda{
+	font:50px Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+
+.arvore{
+	background-image:url("../imagem/faseTres/img1.png");
+	background-size: 100%;
+}
+.asa{
+	background-image:url("../imagem/faseTres/img2.png");
+	background-size: 100%;
+}
+.aviao{
+	background-image:url("../imagem/faseTres/img3.png");
+	background-size: 100%;
+}
+.bolo{
+	background-image:url("../imagem/faseTres/img4.png");
+	background-size: 100%;
+}
+.bola{
+	background-image:url("../imagem/faseTres/img5.png");
+	background-size: 100%;
+}
+.cavalo{
+	background-image:url("../imagem/faseTres/img6.png");
+	background-size: 100%;
+}
+.carro{
+	background-image:url("../imagem/faseTres/img7.png");
+	background-size: 100%;
+}
+.dinheiro{
+	background-image:url("../imagem/faseTres/img8.png");
+	background-size: 100%;
+}
+.dado{
+	background-image:url("../imagem/faseTres/img9.png");
+	background-size: 100%;
+}
+.gato{
+	background-image:url("../imagem/faseTres/img10.png");
+	background-size: 100%;
+}
+.garrafa{
+	background-image:url("../imagem/faseTres/img11.png");
+	background-size: 100%;
+}
+.igreja{
+	background-image:url("../imagem/faseTres/img12.png");
+	background-size: 100%;
+}
+.janela{
+	background-image:url("../imagem/faseTres/img13.png");
+	background-size: 100%;
+}
+.lapis{
+	background-image:url("../imagem/faseTres/img14.png");
+	background-size: 100%;
+}
+.lata{
+	background-image:url("../imagem/faseTres/img15.png");
+	background-size: 100%;
+}
+.mala{
+	background-image:url("../imagem/faseTres/img16.png");
+	background-size: 100%;
+}
+.mesa{
+	background-image:url("../imagem/faseTres/img17.png");
+	background-size: 100%;
+}
+.pipoca{
+	background-image:url("../imagem/faseTres/img18.png");
+	background-size: 100%;
+}
+.pato{
+	background-image:url("../imagem/faseTres/img19.png");
+	background-size: 100%;
+}
+.queijo{
+	background-image:url("../imagem/faseTres/img20.png");
+	background-size: 100%;
+}
+.rato{
+	background-image:url("../imagem/faseTres/img21.png");
+	background-size: 100%;
+}
+.relogio{
+	background-image:url("../imagem/faseTres/img22.png");
+	background-size: 100%;
+}
+.tomada{
+	background-image:url("../imagem/faseTres/img23.png");
+	background-size: 100%;
+}
+.teclado{
+	background-image:url("../imagem/faseTres/img24.png");
+	background-size: 100%;
+}
+.uva{
+	background-image:url("../imagem/faseTres/img25.png");
+	background-size: 100%;
+}

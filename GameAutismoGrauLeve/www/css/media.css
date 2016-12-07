@@ -1,0 +1,381 @@
+/* max-width
+além do bootstrap, algumas configurações precisaram ser feitas para que o conteúdo exibido na tela tornasse responsivo,
+permitindo assim, que o jogo fique proporcional a qualquer tela que a pessoa for jogar
+  */
+
+@media screen and (max-width: 600px) {
+
+	#apresentacao{
+		width:425px;
+		height:225px;
+		margin:0 auto;
+	}
+	
+	#inicio{
+		width:420px;
+		height:220px;
+		margin:0 auto;
+	}
+	
+	#menu{	
+		margin: 0 auto;
+		padding: 35px;
+		margin: 10px auto;	
+	}
+	.menu-img{
+		width:100;
+		height:110px;
+		margin:0 2px 0 0;
+	}
+	
+	#topo{
+		height:68px;
+	}
+	
+	.topo-1 h1,.topo-2 h1,.topo-3 h1,.topo-4 h1{
+		float: left;
+		font:30px Henny Penny;
+		color:#fff;
+		margin: 10px 0 0 25px;
+	}
+	
+	.ajuda{
+		width:40px;
+		height:40px;
+		margin:40px 20px 0 0;		
+	}
+	
+	#fechar{
+		float:right;
+		width:50px;
+		height:50px;
+	}
+	
+	#primeira, #segunda, #terceira, #quarta{
+		width:50px;
+		height:50px;
+	}
+	
+	#texto{	
+		font:30px Henny Penny;
+	}
+	
+	.ajuda-fase1{
+		margin:90px 0 0 0;
+	}
+	
+	.fase1{
+		width:100px;
+		height:100px;
+	}
+	
+	.fase2{
+		width:100px;
+		height:100px;		
+	}
+	.fase3{
+		width:100px;
+		height:100px;		
+	}
+	.fase4{
+		width:100px;
+		height:100px;		
+	}
+	
+	/*fase1*/
+	.fase1-img{	
+		width:35px;
+		height:35px;
+		margin:2px;
+	}
+
+	.imagem-fase1{
+		margin:30px 0 0 0;
+	}
+
+
+	/* fase2 */
+	#label{
+		padding: 10px 40px;
+		font:25px Arial, Helvetica, sans-serif;
+		height:50px;
+		margin: 8px 0 0 20px;
+	}
+	.btFalar{
+		width:55px;
+		height:45px;
+	}
+	.btApagar{
+		width:55px;
+		height:45px;
+	}
+	.imgLetra{
+		width:55px;
+		height:55px;
+	}
+	.btMais{
+		width:45px;
+		height:45px;
+		margin:10px 0 0 0;
+	}
+	.bt_A{
+		width:35px;
+		height:35px;
+	}
+	.bt_E{
+		width:35px;
+		height:35px;
+	}
+	.bt_I{
+		width:35px;
+		height:35px;
+	}
+	.bt_O{
+		width:35px;
+		height:35px;
+		margin-left:20px;
+	}
+	.bt_U{
+		width:35px;
+		height:35px;
+	}
+	.bottonLef{
+		margin:1px 0 15px 30px;
+	}
+	.bottonCenter{
+		margin:1px 0 10px 0;
+	}
+	.bottonRight{
+		width:115px;
+		height:75px;
+		margin:0 0 0 0;
+	}
+	.bottontop{
+		margin:8px 8px 8px 0;
+	}
+	.iconVoltar, .iconVoltar_1{
+		margin:8px 0 0 40px;
+		width:38px;
+		height:48px;
+	}
+	.iconMais, .iconMais_1{
+		margin:8px 40px 0 0;
+		width:38px;
+		height:48px;
+	}
+	.fase1-img{	
+		margin:2px;
+	}
+
+	.img-principal{
+		width:100px;
+		height:100px;
+		margin:10px 0 0 10px;
+	}
+	
+	#palavra-1, #palavra-2, #palavra-3, #palavra-4, #palavra-5{
+		width: 20%;
+		height: 40px;
+		margin: 32px 15px 0 15px;
+		font:10px;
+		padding:5px;
+	}
+	
+	.ajustar-teclado{
+		margin: 0 0 0 10px;
+	}
+
+	.fase4-img{	
+		margin:2px;
+	}
+	
+	.botaoVerificar{
+		margin:0 30px 0 0;
+	}
+	
+	/*fase 4*/
+	.superior{
+		margin:10px auto;
+	}
+	
+	.tela-inicial{
+		margin:30px auto;
+	}
+
+}
+
+/* min-width */
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+	#apresentacao{
+		width:800px;
+		height:400px;
+		margin:0 auto;
+	}
+	
+	#inicio{
+		width:820px;
+		height:550px;
+		margin:0 auto;
+	}
+		
+	#menu{	
+		margin: 0 auto;
+		padding: 45px;
+		margin: 30px auto;
+	}
+	.menu-img{
+		width:200px;
+		height:210px;
+		margin:0 2px 0 0;
+	}
+	
+
+	.fase1{
+		width:175px;
+		height:175px;
+	}
+	.fase2{
+		width:175px;
+		height:175px;		
+	}
+	.fase3{
+		width:175px;
+		height:175px;		
+	}
+	.fase4{
+		width:175px;
+		height:175px;		
+	}
+	.ajuda{
+		width:50px;
+		height:50px;
+		margin:20px 10px 0 30px;		
+	}
+	
+	/* fase2 */
+	.btFalar{
+		width:125px;
+		height:95px;
+	}
+	.btApagar{
+		width:125px;
+		height:95px;
+	}
+	.imgLetra{
+		width:175px;
+		height:175px;
+	}
+	.btMais{
+		width:75px;
+		height:75px;
+	}	
+	.bt_A{
+		width:75px;
+		height:75px;
+	}
+	.bt_E{
+		width:75px;
+		height:75px;
+	}
+	.bt_I{
+		width:75px;
+		height:75px;
+	}
+	.bt_O{
+		width:75px;
+		height:75px;
+		margin:2px 0 0 35px;
+	}
+	.bt_U{
+		width:75px;
+		height:75px;
+	}	
+	.bottonRight{
+		width:205px;
+		height:165px;
+		margin:20px 0 0 40px;
+	}
+
+}
+
+/* min-width & max-width */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	
+	#label{
+		padding: 10px 40px;
+		font:25px Arial, Helvetica, sans-serif;
+		height:90px;
+		margin: 8px 0 0 20px;
+	}
+	/* fase2 */
+	.btFalar{
+		width:85px;
+		height:65px;
+	}
+	.btApagar{
+		width:85px;
+		height:65px;
+	}
+	.imgLetra{
+		width:90px;
+		height:90px;
+		margin:0 0 0 0;
+	}
+	.btMais{
+		width:55px;
+		height:55px;
+		margin:10px 0 0 0;
+	}
+	.bt_A{
+		width:55px;
+		height:55px;
+	}
+	.bt_E{
+		width:55px;
+		height:55px;
+	}
+	.bt_I{
+		width:55px;
+		height:55px;
+	}
+	.bt_O{
+		width:55px;
+		height:55px;
+		margin:2px 0 0 45px;
+	}
+	.bt_U{
+		width:55px;
+		height:55px;
+	}
+	.bottonLef{
+		margin:10px 0 5px 30px;
+	}
+	.bottonCenter{
+		margin:10px 0 5px 0;
+	}
+	.bottonRight{
+		width:155px;
+		height:115px;
+		margin:10px 0 0 30px;
+	}
+	.iconVoltar, .iconVoltar_1{
+		margin:2px 0 0 40px;
+		width:68px;
+		height:78px;
+	}
+	.iconMais, .iconMais_1{
+		margin:2px 40px 0 0;
+		width:68px;
+		height:78px;
+	}
+	
+}
+
+/* max device width */
+@media screen and (max-device-width: 480px) {
+	.imagem-fase1{
+		margin:30px 0 0 0;
+	}
+	
+
+}

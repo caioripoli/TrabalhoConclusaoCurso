@@ -1,0 +1,380 @@
+<!-- Todas as fases contém botões, que fazem diferentes funcionalidades, escrevem, pronunciam, arrastam conteúdos na tela
+e conforme a pessoa clica em determinada fase o jogo esconde as divs das outras fases e mostra apenas a fase selecionada.
+Todas essas funções são feitas por javascript, jquery e outras ações prontas para auxiliar e facilitar o desenvolvimento da aplicação-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JOGO</title>
+	<!-- chama todo conteúdo do css e javascript para realizar as funções dos botões e layouts da tela -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/fase3.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<script src='js/lib/responsivevoice.js'></script>
+	<!--<script src='js/lib/jquery.min.js'></script>-->
+	<script type="text/javascript" src='js/fase2.js'></script>
+	<script type="text/javascript" src='js/fase4.js'></script>
+	<script type="text/javascript" src="js/potes.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- Bloqueia a tela, permitindo somente no formato paisagem -->
+    <script>screen.lockOrientation('landscape');</script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- Todo conteúdo desse arquivo corresponde ao layout do jogo -->
+	<div class="container">
+		<div id="apresentacao">
+			<img src="imagem/abertura.gif" alt="imagem principal" class="img_apresentacao">
+		</div>
+		<!-- Ao inciar o jogo uma tela de apresentação é informado -->
+		<div id="inicio">
+			<!-- Toda class row nesse arquivo corresponde as linhas da página, permitindo que o projeto seja responsivo e que se adapte
+			a qualquer celular, tablet, entre outros-->
+			<div class="row">
+				<!-- Toda class col nesse arquivo corresponde as colunas de cada linha -->
+				<div class="col-xs-2 col-sm-2 col-md-2">
+					<img class="img-responsive tela-inicial" alt="personagem menina" src="imagem/img-1.png" onclick="menu(0)">
+					<img class="img-responsive" alt="personagem menina" src="imagem/seta.gif">
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8">
+					<img class="img-responsive" alt="imagem principal" src="imagem/img-2.jpg" style="margin:0 auto;">
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2">
+					<img class="img-responsive tela-inicial" alt="personagem menu" src="imagem/img-3.png" onclick="menu(1)">
+					<img class="img-responsive" alt="personagem menina" src="imagem/seta.gif">
+				</div>
+			</div>
+		</div>
+		<!-- Após a tela de apresentação ser informado, uma nova tela é apresentada para o usuário, na qual ele irá escolher qual personagem deseja -->
+		<div id="menu">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<img class="menu-img" alt="fase 1" src="imagem/faseUm.png" onclick="fase1()">
+					<img class="menu-img" alt="fase 2" src="imagem/faseDois.png" onclick="fase2()">
+					<img class="menu-img" alt="fase 3" src="imagem/faseTres.png" onclick="fase3()">
+					<img class="menu-img" alt="fase 4" src="imagem/faseQuatro.png" onclick="fase4()">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<img class="ajuda" alt="ajuda" src="imagem/bt_pergunta.png" onclick="ajuda()">
+				</div>
+			</div>
+		</div>
+		<!-- O menu contém a opção de ajuda, na qual a pessoa que irá monitorar o usuário pode verificar a qualquer momento como funciona o jogo  -->
+		<div class="ajuda-1">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div id="fechar"> <img src="imagem/fechar.png" alt="fechar" title="fechar" onclick="fechar()"> </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2">
+					<div id="primeira"> 
+						<!-- Todo onclick dessa página corresponde a uma função do jogo. Quando a pessoa clicar no botão a função será chamada -->
+						<img src="imagem/ajuda-1.png" alt="fase 1" title="fase 1" onclick="mostrarUm()"> 
+					</div>
+					<div id="segunda">
+						<img src="imagem/ajuda-2.png"  alt="fase 2" title="fase 2" onclick="mostrarDois()">
+					</div>
+					<div id="terceira">
+						<img src="imagem/ajuda-3.png" alt="fase 3" title="fase 3" onclick="mostrarTres()">
+						
+					</div>
+					<div id="quarta"> 
+						<img src="imagem/ajuda-4.png" alt="fase 4" title="fase 4" onclick="mostrarQuatro()">
+					</div>
+				</div>
+				<!-- Textos e imagens que informam ao monitor o que cada fase faz -->
+				<div class="col-xs-8 col-sm-8 col-md-8">
+						<div class="apresentar_fase1_left">
+							<p> Fase 1: Clicar na letra para escutar o som. Ao clicar em próximo as letras serão alteradas, conforme
+							a descrição.</p>
+						</div>
+						<div class="apresentar_fase1_right">
+							<!-- Caminho da imagem-->
+							<img src="imagem/faseUm/exemplo_1.gif" alt="imagem exemplo">
+						</div>
+						<div class="apresentar_fase2_left">
+							<p> Fase 2: Clicar na consoante mais vogal. Na tela apareceram duas letras. Basta Clicar no ícone som
+							que o jogo pronunciará as sílabas. Quando clicar em próximo, tanto a consoante quanto
+							a imagem da direita será alterada e assim sucessivamente. Ao clicar no ícone apagar, o jogo apaga as sílabas da tela.</p>
+						</div>
+						<div class="apresentar_fase2_right">
+							<img src="imagem/silabas/exemplo_2.gif" alt="imagem exemplo">
+						</div>
+						<div class="apresentar_fase3_left">
+							<p> Fase 3: Selecionar o desenho que começa com a letra igual ao desenho da esquerda.
+							Ao clicar na imagem, o jogo reproduzirá o som relacionado a imagem. Basta arrasta-lá até a imagem principal
+							para determinar se a correspondencia está correta ou não. Caso esteja correta, o jogo prosseguirá a partir de um 
+							novo pacote de imagens. Caso esteja errado, será possível tentar novamente.
+							</p>
+						</div>
+						<div class="apresentar_fase3_right">
+							<img src="imagem/faseTres/exemplo_3.gif" alt="imagem exemplo">
+						</div>
+						<div class="apresentar_fase4_left">
+							<p> Fase 4: Selecionar as letras que faltam para completar a palavra conforme o desenho.
+							Ao selecionar, clicar em confirmar para verificar se a resposta está correta ou não.
+							Caso esteja correta, o jogo exibirá uma imagem de parabéns e o jogo prosseguirá. Caso esteja incorreta,
+							o jogo exibirá uma imagem de tente novamente. </p>
+						</div>
+						<div class="apresentar_fase4_right">
+							<img src="imagem/faseQuatro/exemplo_4.gif" alt="imagem exemplo">
+						</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2">
+					<img src="" class="ajuda-fase1">
+				</div>
+			</div>
+		</div>
+		<!-- Topo de todas as fases -->
+		<header id="topo">
+			<div class="topo-1">
+				<h1>LETRAS</h1>
+				<img src="imagem/home.png" class="topo-img" alt="Home 1" title="Home" onclick='fase1ParaMenu()'>
+			</div>
+			<div class="topo-2">
+				<h1>SILABAS</h1>
+				<img src="imagem/home.png" class="topo-img" alt="Home 2" title="Home" onclick='fase2ParaMenu()'>
+			</div>
+			<div class="topo-3">
+				<h1>SONS INICIAIS</h1>
+				<img src="imagem/home.png" class="topo-img" alt="Home 3" title="Home" onclick='fase3ParaMenu()'>
+			</div>
+			<div class="topo-4">
+				<h1>COMPLETAR</h1>
+				<img src="imagem/home.png" class="topo-img" alt="Home 4" title="Home" onclick='fase4ParaMenu()'>
+			</div>
+		</header>
+		<!-- Fase um, primeira tela -->
+		<div class="fase1_0">
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="fase1-parte0">
+					<!-- Botões do abcedário -->
+						<img src="imagem/bt_A.png" class="fase1-img" alt="A" title="A" onclick='playTxt("a")'>				
+						<img src="imagem/letras/0.png" class="fase1-img" alt="B" title="B" onclick='playTxt("b")'>
+						<img src="imagem/letras/1.png" class="fase1-img" alt="C" title="C" onclick='playTxt("c")'>
+						<img src="imagem/letras/2.png" class="fase1-img" alt="D" title="D" onclick='playTxt("d")'>
+						<img src="imagem/bt_E.png" class="fase1-img" alt="E" title="E" onclick='playTxt("ê")'>
+						<img src="imagem/letras/3.png" class="fase1-img" alt="F" title="F" onclick='playTxt("f")'>
+						<img src="imagem/letras/4.png" class="fase1-img" alt="G" title="G" onclick='playTxt("ge")'>
+						<img src="imagem/letras/5.png" class="fase1-img" alt="H" title="H" onclick='playTxt("h")'>
+						<img src="imagem/bt_I.png" class="fase1-img" alt="I" title="I" onclick='playTxt("i")'>
+						<img src="imagem/letras/6.png" class="fase1-img" alt="J" title="J" onclick='playTxt("j")'>
+						<img src="imagem/letras/7.png" class="fase1-img" alt="K" title="K" onclick='playTxt("k")'>
+						<img src="imagem/letras/8.png" class="fase1-img" alt="L" title="L" onclick='playTxt("l")'>
+						<img src="imagem/letras/9.png" class="fase1-img" alt="M" title="M" onclick='playTxt("m")'>
+						<img src="imagem/letras/10.png" class="fase1-img" alt="N" title="N" onclick='playTxt("n")'>
+						<img src="imagem/bt_O.png" class="fase1-img" alt="O" title="O" onclick='playTxt("ô")'>
+						<img src="imagem/letras/11.png" class="fase1-img" alt="P" title="P" onclick='playTxt("p")'>
+						<img src="imagem/letras/20.png" class="fase1-img" alt="Q" title="Q" onclick='playTxt("q")'>
+						<img src="imagem/letras/12.png" class="fase1-img" alt="R" title="R" onclick='playTxt("r")'>
+						<img src="imagem/letras/13.png" class="fase1-img" alt="S" title="S" onclick='playTxt("s")'>
+						<img src="imagem/letras/14.png" class="fase1-img" alt="T" title="T" onclick='playTxt("t")'>
+						<img src="imagem/bt_U.png" class="fase1-img" alt="U" title="U" onclick='playTxt("u")'> 
+						<img src="imagem/letras/15.png" class="fase1-img" alt="N" title="N" onclick='playTxt("v")'>
+						<img src="imagem/letras/16.png" class="fase1-img" alt="O" title="O" onclick='playTxt("w")'>
+						<img src="imagem/letras/17.png" class="fase1-img" alt="P" title="P" onclick='playTxt("x")'>
+						<img src="imagem/letras/18.png" class="fase1-img" alt="Q" title="Q" onclick='playTxt("y")'>
+						<img src="imagem/letras/19.png" class="fase1-img" alt="R" title="R" onclick='playTxt("z")'>
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="" class="imagem-fase1">
+				</div>
+			</div>
+		</div>
+		<!-- Fase um, segunda tela -->
+		<div class ="fase1_1">
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">	
+					<div class="fase1-parte1">
+						<img src="imagem/letras/0.png" class="fase1-img" alt="B" title="B" onclick='playTxt("b")'>
+						<img src="imagem/letras/1.png" class="fase1-img" alt="C" title="C" onclick='playTxt("c")'>
+						<img src="imagem/letras/2.png" class="fase1-img" alt="D" title="D" onclick='playTxt("d")'>
+						<img src="imagem/letras/3.png" class="fase1-img" alt="F" title="F" onclick='playTxt("f")'>
+						<img src="imagem/letras/4.png" class="fase1-img" alt="G" title="G" onclick='playTxt("ge")'>
+						<img src="imagem/letras/5.png" class="fase1-img" alt="H" title="H" onclick='playTxt("h")'>
+						<img src="imagem/letras/6.png" class="fase1-img" alt="J" title="J" onclick='playTxt("j")'>
+						<img src="imagem/letras/7.png" class="fase1-img" alt="K" title="K" onclick='playTxt("k")'>
+						<img src="imagem/letras/8.png" class="fase1-img" alt="L" title="L" onclick='playTxt("l")'>
+						<img src="imagem/letras/9.png" class="fase1-img" alt="M" title="M" onclick='playTxt("m")'>
+						<img src="imagem/letras/10.png" class="fase1-img" alt="N" title="N" onclick='playTxt("n")'>
+						<img src="imagem/letras/11.png" class="fase1-img" alt="P" title="P" onclick='playTxt("p")'>
+						<img src="imagem/letras/20.png" class="fase1-img" alt="Q" title="Q" onclick='playTxt("q")'>
+						<img src="imagem/letras/12.png" class="fase1-img" alt="R" title="R" onclick='playTxt("r")'>
+						<img src="imagem/letras/13.png" class="fase1-img" alt="S" title="S" onclick='playTxt("s")'>
+						<img src="imagem/letras/14.png" class="fase1-img" alt="T" title="T" onclick='playTxt("t")'>
+						<img src="imagem/letras/15.png" class="fase1-img" alt="V" title="V" onclick='playTxt("v")'>
+						<img src="imagem/letras/16.png" class="fase1-img" alt="W" title="W" onclick='playTxt("w")'>
+						<img src="imagem/letras/17.png" class="fase1-img" alt="X" title="X" onclick='playTxt("x")'>
+						<img src="imagem/letras/18.png" class="fase1-img" alt="Y" title="Y" onclick='playTxt("y")'>
+						<img src="imagem/letras/19.png" class="fase1-img" alt="Z" title="Z" onclick='playTxt("z")'>
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="" class="imagem-fase1">
+				</div>
+			</div>				
+		</div>
+		<!-- Fase um, terceira tela -->
+		<div class="fase1_2">
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="fase1-parte2">
+						<img src="imagem/bt_A.png" class="fase1-img" alt="A" title="A" onclick='playTxt("a")'>				
+						<img src="imagem/bt_E.png" class="fase1-img" alt="E" title="E" onclick='playTxt("ê")'>
+						<img src="imagem/bt_I.png" class="fase1-img" alt="I" title="I" onclick='playTxt("i")'>
+						<img src="imagem/bt_O.png" class="fase1-img" alt="O" title="O" onclick='playTxt("ô")'>
+						<img src="imagem/bt_U.png" class="fase1-img" alt="U" title="U" onclick='playTxt("u")'> 
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="" class="imagem-fase1">
+				</div>
+			</div>
+		</div>
+		<!-- Itens de ida e volta da fase um -->
+		<div class="fase_1">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<img class="iconVoltar_1" alt="Botão Voltar" src="imagem/icon_voltar.png" onclick="change1(0)">
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<img class="iconMais_1" alt="Botão Proximo" src="imagem/icon_mais.png" onclick="change1(1)">
+				</div>
+			</div>
+		</div>
+		<!-- Fase dois, todo o conteúdo é dinamico. Sempre que a pessoa clicar em próximo ou anterior o conteúdo da tela será trocado  -->
+		<div class="fase_2">
+			<div class="row">
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					<div id="label"></div>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<div class="bottontop">
+						<img class="btFalar" alt="Falar" src="imagem/btFalar.jpg"  onclick="falar('')">
+						<img class="btApagar" alt="Apagar" src="imagem/btApagar.jpg"  onclick="apagar()">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					<div class="bottonLef">
+						<img class="imgLetra" alt="Botão B" src="imagem/letras/0.png" onclick="escrever(-1)">
+						<img class="btMais" alt="Botão Mais" src="imagem/btMais.jpg">
+					</div>
+				</div>
+				<div class="bottonCenter col-xs-4 col-sm-4 col-md-4">
+					<img class="bt_A" alt="Botão A" src="imagem/bt_A.png" onclick="escrever('20')">	
+					<img class="bt_E" alt="Botão E" src="imagem/bt_E.png" onclick="escrever('21')">
+					<img class="bt_I" alt="Botão I" src="imagem/bt_I.png" onclick="escrever('22')">
+					<img class="bt_O" alt="Botão O" src="imagem/bt_O.png" onclick="escrever('23')">
+					<img class="bt_U" alt="Botão U" src="imagem/bt_U.png" onclick="escrever('24')">					
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					<div class="bottonRight">
+						<img src="imagem/silabas/0.png" alt="Silabas" class="imgSilabas">
+					</div>
+				</div>
+			</div>
+			<!-- Botões que permitem que o conteúdo será alterado da tela -->
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<img class="iconVoltar" alt="Botão Voltar" src="imagem/icon_voltar.png" onclick="change(0)">
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<img class="iconMais" alt="Botão Mais" src="imagem/icon_mais.png" onclick="change(1)">
+				</div>
+			</div>
+		</div>
+		<!-- Todo conteúdo da fase 3 é desenvolvido pelo javascript e jquery, no qual divs, classes e metodos são criadas no arquivo index.js-->
+		<div class="fase_3">
+			<div class="conteudo">
+				<div id="div-principal">				
+				</div>
+				<div id="div-selecionavel">
+				</div>
+			</div>
+			<div class="baixo">
+				<p id="legenda"></p>
+			</div>
+		</div>
+		<!-- A fase 4, corresponde a fase de completar palavras conforme a figura -->
+		<div class="fase_4">
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div><img src="imagem/faseQuatro/0.png" class="img-principal" alt="A" title="A"></div>
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					<div class="linha">
+						<div id="palavra-1"></div>
+						<div id="palavra-2"></div>
+						<div id="palavra-3"></div>
+						<div id="palavra-4"></div>
+						<div id="palavra-5"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="ajustar-teclado">
+						<img src="imagem/bt_A.png" class="fase4-img" alt="A" title="A" onclick='teclado("A")'>				
+						<img src="imagem/letras/0.png" class="fase4-img" alt="B" title="B" onclick='teclado("B")'>
+						<img src="imagem/letras/1.png" class="fase4-img" alt="C" title="C" onclick='teclado("C")'>
+						<img src="imagem/letras/2.png" class="fase4-img" alt="D" title="D" onclick='teclado("D")'>
+						<img src="imagem/bt_E.png" class="fase4-img" alt="E" title="E" onclick='teclado("E")'>
+						<img src="imagem/letras/3.png" class="fase4-img" alt="F" title="F" onclick='teclado("F")'>
+						<img src="imagem/letras/4.png" class="fase4-img" alt="G" title="G" onclick='teclado("G")'>
+						<img src="imagem/letras/5.png" class="fase4-img" alt="H" title="H" onclick='teclado("H")'>
+						<img src="imagem/bt_I.png" class="fase4-img" alt="I" title="I" onclick='teclado("I")'>
+						<img src="imagem/letras/6.png" class="fase4-img" alt="J" title="J" onclick='teclado("J")'>
+						<img src="imagem/letras/7.png" class="fase4-img" alt="K" title="K" onclick='teclado("K")'>
+						<img src="imagem/letras/8.png" class="fase4-img" alt="L" title="L" onclick='teclado("L")'>
+						<img src="imagem/letras/9.png" class="fase4-img" alt="M" title="M" onclick='teclado("M")'>
+						<img src="imagem/letras/10.png" class="fase4-img" alt="N" title="N" onclick='teclado("N")'>
+						<img src="imagem/bt_O.png" class="fase4-img" alt="O" title="O" onclick='teclado("O")'>
+						<img src="imagem/letras/11.png" class="fase4-img" alt="P" title="P" onclick='teclado("P")'>
+						<img src="imagem/letras/20.png" class="fase4-img" alt="Q" title="Q" onclick='teclado("Q")'>
+						<img src="imagem/letras/12.png" class="fase4-img" alt="R" title="R" onclick='teclado("R")'>
+						<img src="imagem/letras/13.png" class="fase4-img" alt="S" title="S" onclick='teclado("S")'>
+						<img src="imagem/letras/14.png" class="fase4-img" alt="T" title="T" onclick='teclado("T")'>
+						<img src="imagem/bt_U.png" class="fase4-img" alt="U" title="U" onclick='teclado("U")'> 
+						<img src="imagem/letras/15.png" class="fase4-img" alt="N" title="N" onclick='teclado("V")'>
+						<img src="imagem/letras/16.png" class="fase4-img" alt="O" title="O" onclick='teclado("W")'>
+						<img src="imagem/letras/17.png" class="fase4-img" alt="P" title="P" onclick='teclado("X")'>
+						<img src="imagem/letras/18.png" class="fase4-img" alt="Q" title="Q" onclick='teclado("Y")'>
+						<img src="imagem/letras/18.png" class="fase4-img" alt="R" title="R" onclick='teclado("Z")'>
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img alt="Verificar" src="imagem/faseQuatro/btVerificar.png" class="botaoVerificar" onclick='verificar()'>
+				</div>
+				
+			</div>		
+			<div class="superior">
+				<img src="imagem/fechar.png" class="voltarParaFase" alt="voltar" onclick='voltarFase()'>
+				<!--<img src="imagem/faseQuatro/parabens.gif" class="img-resposta" alt="Verificar">-->
+				<div id="img-verificar"></div>
+			</div>	
+		</div>			
+	</div>
+
+</body>
+</html>

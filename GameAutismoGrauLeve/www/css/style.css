@@ -1,0 +1,347 @@
+/* todo design do jogo está nesse css, além do css do bootstap*/
+img, video {
+   max-width: 100%;
+}
+
+#menu{
+	margin:75px;
+}
+
+#menu input{
+	margin:0 20px;
+}
+
+.ajuda{
+	float:right;
+	margin:30px;
+	width: 75px;
+	height: 75px;
+	border-radius: 37px;
+	-webkit-border-radius: 37px;
+	-moz-border-radius: 37px;
+}
+
+.ajuda:active{
+	 position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+#topo{
+	background-color:#000;
+	height:93px;
+}
+
+.topo-img{
+	float: right;
+	margin: 18px 25px 0 0;
+}
+
+.topo-img:active{
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #000;
+}
+
+.topo-1 h1,.topo-2 h1,.topo-3 h1,.topo-4 h1{
+	float: left;
+	font:40px Henny Penny;
+	color:#fff;
+	margin: 18px 0 0 25px;
+}
+
+#title h1{
+	color:#f4f3f3;
+	float:right;
+	font:48px Verdana, Geneva, sans-serif;	
+	font-weight:600;
+	margin:10px 30px ;
+}
+
+.fase_1, .fase1_0, .fase1_1, .fase1_2, .fase_2, .fase_3, .fase_4{
+	background-color:#fff;
+}
+
+.menu-img{
+	margin:20px 5px 0 20px;	
+}
+
+.menu-img:active{	
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #008B45;
+	 border-radius: 35%;
+
+}
+
+.rodape{
+	background-color:#000;
+	max-width:1005px;
+	margin:0px auto;
+}
+
+#label{
+    padding: 10px 40px;
+    background: #dddddd;
+    border-radius: 25px;
+	color:#252525;
+	display:block;
+	float:left;
+	font:50px Arial, Helvetica, sans-serif;
+	height:125px;
+	margin: 15px 0 0 20px;
+	overflow:auto; /*Quebra da caixa de texto*/
+	overflow-y:hidden;
+	text-align: justify;
+	width:90%;	
+}
+
+.bottontop{
+	margin:15px;
+}
+
+#topright{
+	float:left;
+	padding:20px 20px;
+}
+
+#conteudoleft{
+	float:left;
+	margin:0 0 10px 30px;
+}
+
+.bottonLef{
+	margin:20px 0 10px 20px;
+}
+
+.btMais{
+	padding:0 0 20px 10px;
+}
+
+.bottonCenter{
+	margin:20px 0 40px 0;
+}
+
+.bottonRight{
+	margin:20px 0 30px 0;
+}
+
+#contentIcons {
+	float:left;
+	height:123px;
+	width:1005px;
+}
+
+.iconVoltar, .iconVoltar_1 {
+	float: left;
+	margin:0 0 0 20px;
+}
+
+.iconMais, .iconMais_1 {
+	float: right;
+	margin:0 20px 0 0;
+}
+
+.iconVoltar:active, .iconVoltar_1:active, .iconMais:active, .iconMais_1:active  {
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+.bt_O{
+	margin:2px 0 0 50px;
+}
+
+.bt_U{
+	margin:2px 0 0 0;
+}
+
+.btFalar, .btApagar, .imgLetra, .bt_A, .bt_E, .bt_I, .bt_O, .bt_U{outline:none; max-width: 100%;}
+
+
+.btFalar:active, .btApagar:active, .imgLetra:active, .bt_A:active, .bt_E:active, .bt_I:active, .bt_O:active, .bt_U:active{
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #fff;
+}
+
+.fase1-img{	
+	width:75px;
+	height:75px;
+	margin:4px 4px;
+}
+
+.fase1-img:active{	
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #fff;
+	 border-radius: 50%;
+}
+
+#fechar{
+	width: 95px;
+	height: 95px;
+	border-radius: 42px;
+	-webkit-border-radius: 42px;
+	-moz-border-radius: 42px;
+	float:right;
+	margin:10px 0 5px 0;
+}
+
+#fechar:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+	
+.apresentar_fase1_left, .apresentar_fase2_left, .apresentar_fase3_left, .apresentar_fase4_left{	
+	font:20px;
+	color:#fff;
+	text-align:justify;
+	position:relative;
+	float: left;
+	
+}
+
+
+.imagem-fase1, .ajuda-fase1{
+	margin:160px 0 0 0;
+	float:right;
+}
+
+#primeira, #segunda, #terceira, #quarta{
+	margin:4px 0 4px 0;
+	width: 95px;
+	height: 95px;
+	border-radius:42px;
+	-webkit-border-radius:42px;
+	-moz-border-radius:42px;
+}
+
+#primeira:active, #segunda:active, #terceira:active, #quarta:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+.fase4-img{	
+	width:9%;
+	height:9%;
+	margin:4px 4px;
+}
+
+.fase4-img:active{
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #fff;
+}
+
+.botaoVerificar:active{
+	box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 outline-offset: -5px;
+	 outline: 5px solid #fff;
+}
+
+.img-principal{
+	max-width:100%;
+	height:auto;
+	margin:10px 0 5px 100px;
+}
+
+.teclado-1, .teclado-2, .teclado-3{
+	margin:0 10px 10px 0;
+}
+
+
+.linha{
+	width: 100%;
+    text-align: center;
+}
+
+#palavra-1, #palavra-2, #palavra-3, #palavra-4, #palavra-5{
+	float: left;
+    width: 10%;
+	height: 70px;
+    margin: 60px 15px;
+	font:35px Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding:15px;
+}
+
+.palavra_1,.palavra_2,.palavra_3{
+    background: #dddddd;
+    border-radius: 5px;
+	color:#252525;
+}
+
+.tela-inicial{
+	margin:100px 0 100px 0;
+}
+
+.tela-inicial:active{
+	text-decoration:underline;
+	outline:4px solid #194f92;
+	color:#194f92 !important; 
+	background:transparent !important;
+}
+
+.superior{
+  width: 30%;
+  height: 400px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.voltarParaFase{
+	float:right;
+	height:50px;
+	width:50px;
+}
+
+.ajustar-teclado{
+	margin: 0 0 0 100px;
+}
+
+.fase1-parte0, .fase1-parte1{
+	margin:15px;
+}
+
+.fase1-parte2{
+	height: 100%;
+	min-height: 100%;
+
+  /* habilita o flex nos filhos diretos */
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  /* centraliza na vertical */
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  /* centraliza na horizontal */
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
